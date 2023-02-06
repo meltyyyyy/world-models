@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  world:
+    build: .
+    image: nvidia/cuda:11.3.0-cudnn8-runtime-ubuntu18.04
+    container_name: world
+    runtime: nvidia
+    tty: true
+    volumes:
+      - .:/root/world-models/
